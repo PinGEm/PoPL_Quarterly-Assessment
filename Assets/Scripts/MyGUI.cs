@@ -13,15 +13,6 @@ public class MyGUI : MonoBehaviour
     [SerializeField] private Player3 p_three;
     [SerializeField] private GameObject fight;
 
-    private void Awake()
-    {
-        p_one.idk();
-    }
-
-    private void Update()
-    {
-        clutch = p_one.CLUTCH;
-    }
     private void OnGUI()
     {
         GUI.Box(new Rect(350, 70, 700, 600), "Player Creation");
@@ -33,6 +24,8 @@ public class MyGUI : MonoBehaviour
             playerStatText = p_one.ClassName + " Stats: \n\rHealth: " + p_one.ClassHealth + "\n\rDefense: " + p_one.ClassDefense + "\n\rAttack: " + p_one.ClassAttack;
             playerChosen = "Player 1 ";
             Debug.Log(p_one.ClassDefense);
+            p_one.idk();
+            clutch = p_one.CLUTCH;
         }
 
         if (GUI.Button(new Rect(375, 250, 150, 80), "Player 2 Stats"))
